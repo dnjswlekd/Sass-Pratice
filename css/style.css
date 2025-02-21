@@ -2,6 +2,13 @@ body {
   font-size: 16px;
   color: #000;
   line-height: 1.6em;
+  display: flex;
+  display: grid;
+}
+
+.frame {
+  transform: translate(200px, 100px);
+  box-sizing: border-box;
 }
 
 h1 {
@@ -16,7 +23,7 @@ h1 span {
   color: red;
 }
 h1 span:hover {
-  transition: 0.3s;
+  transition: 0.3s ease-in-out;
   transform: translateX(10px);
   color: blue;
-}/*# sourceMappingURL=style.css.map */
+}
