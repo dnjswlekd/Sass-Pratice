@@ -66,3 +66,17 @@ a {
   opacity: 1;
   transform: rotate(-45deg);
 }
+
+.font-large {
+  text-transform: uppercase;
+  color: red;
+  font-size: 50px;
+}
+.font-medium {
+  color: green;
+  font-size: 30px;
+}
+.font-small {
+  color: blue;
+  font-size: 20px;
+}

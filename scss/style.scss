@@ -66,3 +66,18 @@ a {
     }
   }
 }
+.font {
+  &-large {
+    text-transform: uppercase;
+    color: red;
+    font-size: 50px;
+  }
+  &-medium {
+    color: green;
+    font-size: 30px;
+  }
+  &-small {
+    color: blue;
+    font-size: 20px;
+  }
+}
