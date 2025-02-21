@@ -1,3 +1,22 @@
-h1 {
+body {
+  font-size: 16px;
   color: #000;
+  line-height: 1.6em;
+}
+
+h1 {
+  font-size: 26px;
+  font-weight: normal;
+  text-transform: uppercase;
+  text-align: center;
+  line-height: 1.3em;
+}
+h1 span {
+  display: block;
+  color: red;
+}
+h1 span:hover {
+  transition: 0.3s;
+  transform: translateX(10px);
+  color: blue;
 }/*# sourceMappingURL=style.css.map */
