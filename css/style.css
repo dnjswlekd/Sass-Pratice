@@ -2,6 +2,8 @@
 body {
   font-family: "Noto Sans KR", serif;
   display: flex;
+  flex-flow: column;
+  gap: 30px;
   justify-content: center;
   align-items: center;
   height: 100vh;
@@ -27,4 +29,40 @@ a {
 .sns li a {
   color: #000;
   text-transform: uppercase;
+}
+
+.btn-wrap .btn {
+  position: relative;
+  display: block;
+  text-align: center;
+  width: 300px;
+  height: 50px;
+  line-height: 50px;
+  color: #000;
+  text-transform: uppercase;
+  background-color: #ddd;
+}
+.btn-wrap .btn:hover {
+  background-color: #fff;
+  transition: ease-in-out 0.2s;
+  text-decoration: underline;
+}
+.btn-wrap .btn:before, .btn-wrap .btn:after {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  width: inherit;
+  height: inherit;
+  border: 1px solid #000;
+  opacity: 0;
+  transition: ease-in-out 0.2s;
+}
+.btn-wrap .btn:hover:before {
+  opacity: 1;
+  transform: rotate(45deg);
+}
+.btn-wrap .btn:hover:after {
+  opacity: 1;
+  transform: rotate(-45deg);
 }
