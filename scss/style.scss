@@ -6,7 +6,6 @@ body {
   gap: 30px;
   justify-content: center;
   align-items: center;
-  height: 100vh;
 }
 a {
   text-decoration: none;
@@ -114,6 +113,51 @@ a {
     }
     @at-root .warning {
       background-color: yellow;
+    }
+  }
+}
+.btn2 {
+  padding: 10px;
+  background-color: #fff;
+  color: #000;
+  border-radius: 5px;
+  border: 1px solid #000;
+  cursor: pointer;
+  transition: 0.35s;
+  &:hover {
+    background-color: #000;
+    color: #fff;
+  }
+}
+hr {
+  width: 100%;
+}
+.wrap {
+  width: 100%;
+  display: flex;
+  gap: 20px;
+  div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 1;
+    height: 150px;
+    border-radius: 10px;
+    box-shadow: 0 0 5px 5px rgb(0, 0, 0, 0.05);
+    transition: 0.35s;
+    cursor: pointer;
+    &:hover {
+      transform: translateY(-10px);
+      color: #fff;
+    }
+    &:nth-child(1) {
+      background-color: crimson;
+    }
+    &:nth-child(2) {
+      background-color: yellowgreen;
+    }
+    &:nth-child(3) {
+      background-color: royalblue;
     }
   }
 }

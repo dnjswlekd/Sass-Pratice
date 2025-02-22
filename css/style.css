@@ -6,7 +6,6 @@ body {
   gap: 30px;
   justify-content: center;
   align-items: center;
-  height: 100vh;
 }
 
 a {
@@ -116,4 +115,52 @@ button.btn {
 
 .warning {
   background-color: yellow;
+}
+
+.btn2 {
+  padding: 10px;
+  background-color: #fff;
+  color: #000;
+  border-radius: 5px;
+  border: 1px solid #000;
+  cursor: pointer;
+  transition: 0.35s;
+}
+.btn2:hover {
+  background-color: #000;
+  color: #fff;
+}
+
+hr {
+  width: 100%;
+}
+
+.wrap {
+  width: 100%;
+  display: flex;
+  gap: 20px;
+}
+.wrap div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+  height: 150px;
+  border-radius: 10px;
+  box-shadow: 0 0 5px 5px rgba(0, 0, 0, 0.05);
+  transition: 0.35s;
+  cursor: pointer;
+}
+.wrap div:hover {
+  transform: translateY(-10px);
+  color: #fff;
+}
+.wrap div:nth-child(1) {
+  background-color: crimson;
+}
+.wrap div:nth-child(2) {
+  background-color: yellowgreen;
+}
+.wrap div:nth-child(3) {
+  background-color: royalblue;
 }
