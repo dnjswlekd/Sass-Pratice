@@ -1,11 +1,16 @@
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap");
-body {
+* {
   font-family: "Noto Sans KR", serif;
+  box-sizing: border-box;
+}
+
+body {
   display: flex;
   flex-flow: column;
   gap: 30px;
   justify-content: center;
   align-items: center;
+  font-size: 15px;
 }
 
 a {
@@ -163,4 +168,56 @@ hr {
 }
 .wrap div:nth-child(3) {
   background-color: royalblue;
+}
+
+.signin {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-flow: column;
+  width: 600px;
+  background-color: #f8f8f8;
+  padding: 10px;
+  border-radius: 5px;
+}
+.signin h1 {
+  font-weight: normal;
+  margin-top: 0;
+}
+.signin .signin-inner {
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #fff;
+  width: 300px;
+}
+.signin input[type=button],
+.signin input[type=email],
+.signin input[type=password],
+.signin input[type=submit] {
+  display: block;
+  width: 100%;
+  padding: 4px 8px;
+  margin: 10px 0;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  outline: none;
+}
+.signin input[type=button] {
+  margin-bottom: 20px;
+  cursor: pointer;
+}
+.signin input[type=button]:hover {
+  background-color: rgb(181, 217, 22);
+}
+.signin input[type=email]:focus {
+  background-color: rgb(239, 239, 115);
+}
+.signin input[type=password]:focus {
+  outline: 1px solid blue;
+}
+.signin input[type=submit] {
+  background-color: rgb(24, 158, 24);
+  color: #fff;
+  cursor: pointer;
 }
