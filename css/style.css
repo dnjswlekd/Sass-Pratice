@@ -221,3 +221,15 @@ hr {
   color: #fff;
   cursor: pointer;
 }
+
+.frame-root {
+  width: 100%;
+  text-align: center;
+  border: 1px solid #000;
+  padding: 10px;
+}
+.heading {
+  font-size: 36px;
+  font-weight: normal;
+  text-transform: uppercase;
+}
