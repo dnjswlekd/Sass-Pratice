@@ -16,6 +16,7 @@ $statuses: (
 
 .button-group {
   text-align: center;
+  margin-bottom: 20px;
   .btn {
     @include btn;
   }
@@ -28,6 +29,14 @@ $statuses: (
         background-color: $color;
       }
     }
+  }
+  .approval {
+    @include btn-border(2px, solid, royalblue);
+    @include btn-padding(10px, 40px);
+  }
+  .refuse {
+    @include btn-border(2px, dashed, crimson);
+    @include btn-padding(10px, 40px);
   }
   // .complete {
   //   color: $color-complete;

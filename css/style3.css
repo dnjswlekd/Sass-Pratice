@@ -10,10 +10,10 @@ body {
 
 .button-group {
   text-align: center;
+  margin-bottom: 20px;
 }
 .button-group .btn {
-  width: 100px;
-  height: 30px;
+  padding: 8px 50px;
   border: 2px solid #ddd;
   background-color: #fff;
   color: #000;
@@ -48,4 +48,12 @@ body {
 .button-group .error:hover {
   color: #fff;
   background-color: red;
+}
+.button-group .approval {
+  border: 2px solid royalblue;
+  padding: 10px 40px;
+}
+.button-group .refuse {
+  border: 2px dashed crimson;
+  padding: 10px 40px;
 }

@@ -12,8 +12,7 @@
   color: #333;
 }
 @mixin btn {
-  width: 100px;
-  height: 30px;
+  padding: 8px 50px;
   border: 2px solid #ddd;
   background-color: #fff;
   color: #000;
@@ -24,4 +23,10 @@
     background-color: #ddd;
     color: #fff;
   }
+}
+@mixin btn-border($width, $style, $color) {
+  border: $width $style $color;
+}
+@mixin btn-padding($upDown, $leftRight) {
+  padding: $upDown $leftRight;
 }
