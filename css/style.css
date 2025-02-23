@@ -132,6 +132,10 @@ table {
 }
 
 * {
+  font-family: "Raleway", serif;
+}
+
+* {
   font-family: "Noto Sans KR", serif;
   box-sizing: border-box;
 }

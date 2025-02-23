@@ -1,11 +1,43 @@
 @import 'mixin';
+@import 'reset';
+
+$font-family: (
+  kor: 'Noto Sans Ko',
+  eng: 'Montserrat',
+);
+$font-size: (
+  large: 30px,
+  medium: 20px,
+  small: 15px,
+);
+$font-color: (
+  primary: yellowgreen,
+  secondary: salmon,
+);
+
+$font-family: (
+  kor: 'Noto Sans Ko',
+  eng: 'Montserrat',
+);
 
 body {
   text-align: center;
   @include default;
 }
 
-%btn {
+.btn {
+  width: 200px;
+  padding: 8px;
+  border: 2px dashed #ddd;
+  background-color: #fff;
+  border-radius: 4px;
+  margin: 10px;
+  font-size: 18px;
+  text-transform: capitalize;
+  color: #000;
+}
+
+%btn-style {
   width: 200px;
   padding: 8px;
   border: 2px dashed #ddd;
@@ -26,7 +58,7 @@ $btn-group: (
 .button-group {
   @each $name, $color in $btn-group {
     .#{$name} {
-      @extend %btn;
+      @extend %btn-style;
       color: #fff;
       background-color: $color;
       border: 1px solid $color;
@@ -35,5 +67,18 @@ $btn-group: (
         color: #000;
       }
     }
+  }
+}
+.font-wrap {
+  text-align: left;
+  h1 {
+    font-family: map-get($font-family, kor);
+    font-size: map-get($font-size, large);
+    color: map-get($font-color, primary);
+  }
+  p {
+    font-family: map-get($font-family, eng);
+    font-size: map-get($font-size, small);
+    color: map-get($font-color, secondary);
   }
 }
