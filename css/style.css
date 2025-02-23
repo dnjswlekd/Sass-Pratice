@@ -108,7 +108,7 @@ a {
   margin: 10px;
   padding: 10px;
 }
-button.btn {
+.frame button.btn {
   width: 200px;
   padding: 10px;
   border: none;
@@ -245,12 +245,12 @@ hr {
   text-transform: uppercase;
 }
 
-:is(header, section, footer) h1 {
+.container :is(header, section, footer) h1 {
   font-size: 30px;
   font-weight: normal;
 }
 
-:is(header, section, footer) h1::before {
+.container :is(header, section, footer) h1::before {
   content: "";
   display: inline-block;
   width: 10px;
@@ -258,5 +258,24 @@ hr {
   border-radius: 4px;
   margin-right: 10px;
   transform: translateY(2px);
+  background-color: crimson;
+}
+
+.btns .btn {
+  text-transform: uppercase;
+  border: none;
+  background-color: #ddd;
+  border-radius: 4px;
+  padding: 10px 30px;
+  margin-right: 4px;
+  color: #fff;
+}
+.btns .primary {
+  background-color: royalblue;
+}
+.btns .secondary {
+  background-color: yellowgreen;
+}
+.btns .tertiary {
   background-color: crimson;
 }

@@ -107,7 +107,7 @@ a {
 .frame {
   margin: 10px;
   padding: 10px;
-  @at-root button.btn {
+  button.btn {
     width: 200px;
     padding: 10px;
     border: none;
@@ -240,11 +240,11 @@ hr {
     transform: uppercase;
   }
 }
-:is(header, section, footer) h1 {
+.container :is(header, section, footer) h1 {
   font-size: 30px;
   font-weight: normal;
 }
-:is(header, section, footer) h1::before {
+.container :is(header, section, footer) h1::before {
   content: '';
   display: inline-block;
   width: 10px;
@@ -253,4 +253,30 @@ hr {
   margin-right: 10px;
   transform: translateY(2px);
   background-color: crimson;
+}
+
+// 변수
+$primary-btn: royalblue;
+$secondary-btn: yellowgreen;
+$tertiary-btn: crimson;
+
+.btns {
+  .btn {
+    text-transform: uppercase;
+    border: none;
+    background-color: #ddd;
+    border-radius: 4px;
+    padding: 10px 30px;
+    margin-right: 4px;
+    color: #fff;
+  }
+  .primary {
+    background-color: $primary-btn;
+  }
+  .secondary {
+    background-color: $secondary-btn;
+  }
+  .tertiary {
+    background-color: $tertiary-btn;
+  }
 }
