@@ -9,7 +9,7 @@ body {
   color: #333;
 }
 
-.btn, .button-group .checkout, .button-group .add, .button-group .order {
+.button-group .checkout, .button-group .add, .button-group .order {
   width: 200px;
   padding: 8px;
   border: 2px dashed #ddd;

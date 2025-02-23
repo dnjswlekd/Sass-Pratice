@@ -5,7 +5,7 @@ body {
   @include default;
 }
 
-.btn {
+%btn {
   width: 200px;
   padding: 8px;
   border: 2px dashed #ddd;
@@ -26,7 +26,7 @@ $btn-group: (
 .button-group {
   @each $name, $color in $btn-group {
     .#{$name} {
-      @extend .btn;
+      @extend %btn;
       color: #fff;
       background-color: $color;
       border: 1px solid $color;
