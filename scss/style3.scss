@@ -1,39 +1,56 @@
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+@import 'mixin';
 
-@import 'reset';
-
-* {
-  font-family: 'Raleway', serif;
-  box-sizing: border-box;
-}
 body {
-  margin: 0;
-  padding: 20px;
+  @include default;
 }
-@mixin title {
-  position: relative;
-  font-size: 36px;
+
+// $color-complete: green;
+// $color-loading: royalblue;
+// $color-error: red;
+
+$statuses: (
+  complete: green,
+  loading: royalblue,
+  error: red,
+);
+
+.button-group {
   text-align: center;
-  font-weight: normal;
-  padding: 20px;
-  text-transform: capitalize;
-  span {
-    color: royalblue;
+  .btn {
+    @include btn;
   }
-  &::before {
-    content: '';
-    position: absolute;
-    left: 50%;
-    bottom: 0;
-    transform: translateX(-50%);
-    display: block;
-    width: 100px;
-    height: 4px;
-    background-color: crimson;
-    border-radius: 5px;
+  @each $name, $color in $statuses {
+    .#{$name} {
+      color: $color;
+      border-color: $color;
+      &:hover {
+        color: #fff;
+        background-color: $color;
+      }
+    }
   }
-}
-.heading,
-.headline {
-  @include title;
+  // .complete {
+  //   color: $color-complete;
+  //   border-color: $color-complete;
+  //   &:hover {
+  //     color: #fff;
+  //     background-color: $color-complete;
+  //   }
+  // }
+  // .loading {
+  //   color: $color-loading;
+  //   border-color: $color-loading;
+  //   &:hover {
+  //     color: #fff;
+  //     background-color: $color-loading;
+  //   }
+  // }
+  // .error {
+  //   color: $color-error;
+  //   border-color: $color-error;
+  //   &:hover {
+  //     color: #fff;
+  //     background-color: $color-error;
+  //   }
+  // }
 }
