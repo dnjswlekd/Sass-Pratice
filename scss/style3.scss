@@ -1,0 +1,39 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
+@import 'reset';
+
+* {
+  font-family: 'Raleway', serif;
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  padding: 20px;
+}
+@mixin title {
+  position: relative;
+  font-size: 36px;
+  text-align: center;
+  font-weight: normal;
+  padding: 20px;
+  text-transform: capitalize;
+  span {
+    color: royalblue;
+  }
+  &::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    display: block;
+    width: 100px;
+    height: 4px;
+    background-color: crimson;
+    border-radius: 5px;
+  }
+}
+.heading,
+.headline {
+  @include title;
+}
