@@ -1,0 +1,58 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+  font-family: 'Raleway', serif;
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  padding: 0;
+}
+// Variables
+$color-primary: #222;
+$color-secondary: #333;
+$color-background: #eee;
+$portfolio-item-w: 100%;
+$portfolio-item-h: 300px;
+$portfolio-item-brd: 4px;
+$portfolio-image-url: '../images/';
+
+.portfolio {
+  border: 1px solid #000;
+  text-align: center;
+  margin: 20px;
+  padding: 20px;
+  h1 {
+    text-transform: uppercase;
+    font-weight: normal;
+  }
+  .portfolio-items {
+    width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 15px;
+    .portfolio-item {
+      margin: 0 auto;
+      border: 1px solid #000;
+      width: $portfolio-item-w;
+      height: $portfolio-item-h;
+      border-radius: $portfolio-item-brd;
+      background-position: center center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      &:nth-child(1) {
+        background-image: url($portfolio-image-url + 'avatar-03.jpg');
+      }
+      &:nth-child(2) {
+        background-image: url($portfolio-image-url + 'avatar-02.jpg');
+      }
+      &:nth-child(3) {
+        background-image: url($portfolio-image-url + 'avatar-04.jpg');
+      }
+      &:nth-child(4) {
+        background-image: url($portfolio-image-url + 'avatar-05.jpg');
+      }
+    }
+  }
+}

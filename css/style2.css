@@ -1,0 +1,50 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap");
+* {
+  font-family: "Raleway", serif;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.portfolio {
+  border: 1px solid #000;
+  text-align: center;
+  margin: 20px;
+  padding: 20px;
+}
+.portfolio h1 {
+  text-transform: uppercase;
+  font-weight: normal;
+}
+.portfolio .portfolio-items {
+  width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 15px;
+}
+.portfolio .portfolio-items .portfolio-item {
+  margin: 0 auto;
+  border: 1px solid #000;
+  width: 100%;
+  height: 300px;
+  border-radius: 4px;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.portfolio .portfolio-items .portfolio-item:nth-child(1) {
+  background-image: url("../images/avatar-03.jpg");
+}
+.portfolio .portfolio-items .portfolio-item:nth-child(2) {
+  background-image: url("../images/avatar-02.jpg");
+}
+.portfolio .portfolio-items .portfolio-item:nth-child(3) {
+  background-image: url("../images/avatar-04.jpg");
+}
+.portfolio .portfolio-items .portfolio-item:nth-child(4) {
+  background-image: url("../images/avatar-05.jpg");
+}
