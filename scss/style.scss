@@ -240,3 +240,17 @@ hr {
     transform: uppercase;
   }
 }
+:is(header, section, footer) h1 {
+  font-size: 30px;
+  font-weight: normal;
+}
+:is(header, section, footer) h1::before {
+  content: '';
+  display: inline-block;
+  width: 10px;
+  height: 30px;
+  border-radius: 4px;
+  margin-right: 10px;
+  transform: translateY(2px);
+  background-color: crimson;
+}
