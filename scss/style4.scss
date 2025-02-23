@@ -1,0 +1,39 @@
+@import 'mixin';
+
+body {
+  text-align: center;
+  @include default;
+}
+
+.btn {
+  width: 200px;
+  padding: 8px;
+  border: 2px dashed #ddd;
+  background-color: #fff;
+  border-radius: 4px;
+  margin: 10px;
+  font-size: 18px;
+  text-transform: capitalize;
+  color: #000;
+}
+
+$btn-group: (
+  order: purple,
+  add: green,
+  checkout: black,
+);
+
+.button-group {
+  @each $name, $color in $btn-group {
+    .#{$name} {
+      @extend .btn;
+      color: #fff;
+      background-color: $color;
+      border: 1px solid $color;
+      @if $name == 'checkout' {
+        background-color: transparent;
+        color: #000;
+      }
+    }
+  }
+}
